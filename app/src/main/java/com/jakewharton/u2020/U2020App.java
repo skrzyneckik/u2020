@@ -2,6 +2,8 @@ package com.jakewharton.u2020;
 
 import android.app.Application;
 import android.support.annotation.NonNull;
+
+import com.frogermcs.androiddevmetrics.AndroidDevMetrics;
 import com.jakewharton.threetenabp.AndroidThreeTen;
 import com.jakewharton.u2020.data.Injector;
 import com.jakewharton.u2020.data.LumberYard;
@@ -27,6 +29,7 @@ public final class U2020App extends Application {
 
     if (BuildConfig.DEBUG) {
       Timber.plant(new DebugTree());
+      AndroidDevMetrics.initWith(this);
     } else {
       // TODO Crashlytics.start(this);
       // TODO Timber.plant(new CrashlyticsTree());

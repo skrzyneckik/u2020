@@ -6,6 +6,7 @@ def versionBuild = 0 // bump for dogfood builds, public betas, etc.
 
 apply plugin: 'com.android.application'
 apply plugin: 'spoon'
+apply plugin: 'com.frogermcs.androiddevmetrics'
 
 def gitSha() {
   def p = 'git rev-parse --short HEAD'.execute([], project.rootDir)
